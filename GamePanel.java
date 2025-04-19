@@ -7,35 +7,39 @@ public class GamePanel extends JPanel implements KeyListener {
     private JLabel player1Label, player2Label, resultLabel, instructionsLabel, livesLabel;
     private JLabel player1ItemLabel, player2ItemLabel;
     private JButton resetButton, player1UseItemButton, player2UseItemButton;
+    private EffectsManager effectsManager;
     
     public GamePanel() {
         game = new RockPaperScissorsGame();
         setLayout(new BorderLayout());
         
-        instructionsLabel = new JLabel("<html>Player 1: A=Rock, S=Paper, D=Scissors | Player 2: J=Rock, K=Paper, L=Scissors<br>First to lose 3 lives loses the round!<br>Items: Q (P1) / P (P2) to use</html>");
+        instructionsLabel = new JLabel("<html><center>Player 1: A=Rock, S=Paper, D=Scissors<br>Player 2: J=Rock, K=Paper, L=Scissors<br>First to lose 3 lives loses the round!<br>Items: Q (P1) / P (P2) to use</center></html>");
         instructionsLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        instructionsLabel.setFont(new Font("Arial", Font.BOLD, 14));
         
         player1Label = new JLabel("Player 1: ");
         player1Label.setHorizontalAlignment(SwingConstants.CENTER);
-        player1Label.setFont(new Font("Arial", Font.BOLD, 20));
+        player1Label.setFont(new Font("Arial", Font.BOLD, 24));
         
         player2Label = new JLabel("Player 2: ");
         player2Label.setHorizontalAlignment(SwingConstants.CENTER);
-        player2Label.setFont(new Font("Arial", Font.BOLD, 20));
+        player2Label.setFont(new Font("Arial", Font.BOLD, 24));
         
         livesLabel = new JLabel(getLivesText());
         livesLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        livesLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        livesLabel.setFont(new Font("Arial", Font.BOLD, 18));
         
         player1ItemLabel = new JLabel("Item: None");
         player1ItemLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        player1ItemLabel.setFont(new Font("Arial", Font.ITALIC, 16));
         
         player2ItemLabel = new JLabel("Item: None");
         player2ItemLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        player2ItemLabel.setFont(new Font("Arial", Font.ITALIC, 16));
         
         resultLabel = new JLabel("Make your choices!");
         resultLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        resultLabel.setFont(new Font("Arial", Font.BOLD, 28));
         
         resetButton = new JButton("Reset Game");
         resetButton.addActionListener(e -> {
@@ -68,6 +72,8 @@ public class GamePanel extends JPanel implements KeyListener {
         
         add(gamePanel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
+        
+        effectsManager = new EffectsManager();
         
         setFocusable(true);
         addKeyListener(this);
@@ -114,14 +120,17 @@ public class GamePanel extends JPanel implements KeyListener {
                     } else {
                         game.adjustRoundsWonByPlayer1(-1);
                     }
+                    effectsManager.playSwordEffect();
                     break;
                     
                 case "shield":
                     message = "Player " + player + " used Shield! Invulnerable this round!";
+                    effectsManager.playShieldEffect();
                     break;
                     
                 case "gun":
                     message = "Player " + player + " used GUN! Instant victory!";
+                    effectsManager.playGunEffect();
                     gameOver = true;
                     break;
             }
@@ -130,7 +139,7 @@ public class GamePanel extends JPanel implements KeyListener {
             updateItemDisplays();
             
             if (gameOver) {
-                resetButton.doClick();
+                new Timer(2000, e -> resetButton.doClick()).start();
             }
         }
     }

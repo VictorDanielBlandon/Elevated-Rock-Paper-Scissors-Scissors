@@ -5,7 +5,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Rock Paper Scissors Game");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(600, 500);
+            frame.setSize(600, 450);
             
             GamePanel gamePanel = new GamePanel();
             frame.add(gamePanel);
