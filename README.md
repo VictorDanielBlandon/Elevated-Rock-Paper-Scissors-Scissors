@@ -3,6 +3,21 @@ Welcome to Rock Paper Scissors Scissors!
 
 To compile and run the game in your system run the following commands:
 
-1. javac RockPaperScissorsGame.java ItemSystem.java HighScoreTable.java GamePanel.java Main.java
+1. Fork this repository and download it in your local machine
+1. javac ItemSystem.java HighScoreTable.java GamePanel.java EffectsManager.java RockPaperScissorsGame.java Main.java 
 2. java Main.java
-3. More to be added ...
+
+## Debugging Notes
+
+Need to fix audio parameters: the reading of the path when trying to get access to the .wav files makes the game's HighScoreTable loop forever, need to fix that before next Friday. 
+
+NPU Object Oriented Programming 
+Team No. #
+
+Team Members:
+1.
+2.
+3.
+4.
+5.
+
