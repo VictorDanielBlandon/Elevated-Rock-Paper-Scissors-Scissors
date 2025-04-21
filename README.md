@@ -11,6 +11,7 @@ To compile and run the game in your system run the following commands:
 
 * Need to fix audio parameters: the reading of the path when trying to get access to the .wav files makes the game's HighScoreTable loop forever, need to fix that before next Friday.
 * Audio issue is caused by me running the program through wsl2, ask another person to run program through their cmd.
+* Still have issues with the HighSCoreTable infinite loop, fix later.
 
 NPU Object Oriented Programming 
 Team No. #
