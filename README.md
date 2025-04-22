@@ -1,4 +1,5 @@
 # Elevated-Rock-Paper-Scissors-Scissors
+🪨📄✂️
 Welcome to Rock Paper Scissors Scissors! 
 
 To compile and run the game in your system run the following commands:
@@ -8,23 +9,14 @@ To compile and run the game in your system run the following commands:
 2. java Main.java
 
 ## Debugging Notes
-
-* Need to fix audio parameters: the reading of the path when trying to get access to the .wav files makes the game's HighScoreTable loop forever, need to fix that before next Friday.
-* Audio issue is caused by me running the program through wsl2, ask another person to run program through their cmd.
-* Still have issues with the HighSCoreTable infinite loop, fix later.
-* Need to add more data to the High Score Table, we said Wins, Losses and most used move in the last meeting
-* Missing the UML DIagram.
-* Need to ask if the report is needed.
-* Need to ask for ID's and full names
-* Need to try the game in everyone else's machines to check if it works correctly.
-
+* Audio issue is caused by me running the program through wsl2, run the program through windows cmd or mac terminal
 NPU Object Oriented Programming 
-Team No. #
+Team No. 11
 
 Team Members:
-1.
-2.
-3.
-4.
-5.
+1. Olunloyo David 2023380121
+2. Merjen Dursunova 2023280168
+3. Tayyaba 2023380151
+4. Tay Che Ming 2022380166
+5. Victor Daniel 2023380230
 
