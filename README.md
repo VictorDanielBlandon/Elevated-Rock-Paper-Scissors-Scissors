@@ -18,5 +18,5 @@ Team Members:
 2. Merjen Dursunova 2023280168
 3. Tayyaba 2023380151
 4. Tay Che Ming 2022380166
-5. Victor Daniel 2023380230
+5. Victor Daniel 2023380230 // Remember to push the final update, fixed infinite loop issue with a throwException
 
