@@ -1,5 +1,5 @@
-# Elevated-Rock-Paper-Scissors-Scissors
-🪨📄✂️
+# 🪨📄✂️ Elevated-Rock-Paper-Scissors-Scissors
+
 Welcome to Rock Paper Scissors Scissors! 
 
 To compile and run the game in your system run the following commands:
