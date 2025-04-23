@@ -9,8 +9,8 @@ To compile and run the game in your system run the following commands:
 2. java Main.java
 
 ## Debugging Notes
-* Audio issue is caused by me running the program through wsl2, run the program through windows cmd or mac terminal
-NPU Object Oriented Programming 
+* Major bugs fixed 04/23/2025
+  
 Team No. 11
 
 Team Members:
@@ -18,5 +18,5 @@ Team Members:
 2. Merjen Dursunova 2023280168
 3. Tayyaba 2023380151
 4. Tay Che Ming 2022380166
-5. Victor Daniel 2023380230 // Remember to push the final update, fixed infinite loop issue with a throwException
+5. Victor Daniel 2023380230 
 
