@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class RockPaperScissorsGame {
     private String player1Choice = "";
@@ -83,7 +84,7 @@ public class RockPaperScissorsGame {
                 result.roundWinner = 1;
             }
             itemSystem.awardItems(result.roundWinner);
-            resetLives();
+            resetLives();   
         }
         
         result.player1Choice = player1Choice;
@@ -94,20 +95,23 @@ public class RockPaperScissorsGame {
         result.roundsWonByPlayer2 = roundsWonByPlayer2;
         
         resetChoices();
-        return result;
+        return result;  
     }
     
-    public void resetGame() {
+    public void resetGame() throws NumberFormatException{
         resetChoices();
         resetLives();
         roundsWonByPlayer1 = 0;
         roundsWonByPlayer2 = 0;
         itemSystem = new ItemSystem();
+        throw new NumberFormatException();
     }
     
     private void resetChoices() {
         player1Choice = "";
-        player2Choice = "";
+        player2Choice = ""; 
+
+        return; 
     }
     
     private void resetLives() {
@@ -126,5 +130,9 @@ public class RockPaperScissorsGame {
         public boolean player1WonMatch = false;
         public boolean player2WonMatch = false;
         public int roundWinner = 0;
+    }
+
+    public boolean hasCompletedRounds() {
+        return roundsWonByPlayer1 > 0 || roundsWonByPlayer2 > 0;
     }
 }

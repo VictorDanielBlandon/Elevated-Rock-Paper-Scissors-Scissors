@@ -7,9 +7,9 @@ public class EffectsManager {
     
     public EffectsManager() {
         try {
-            swordSound = loadSound("C:\\Users\\88693\\Desktop\\rps\\resources\\sword.wav");
-            shieldSound = loadSound("C:\\Users\\88693\\Desktop\\rps\\resources\\shield.wav");
-            gunSound = loadSound("C:\\Users\\88693\\Desktop\\rps\\resources\\gun.wav");
+            swordSound = loadSound("sword.wav");
+            shieldSound = loadSound("shield.wav");
+            gunSound = loadSound("gun.wav");
         } catch (Exception e) {
             System.err.println("Error loading sound effects: " + e.getMessage());
         }
